@@ -1,0 +1,377 @@
+<html>
+	<head>
+		
+		<style>
+		body{
+			width:auto;height:auto;font-family:Helvetica;margin:0;padding:0;
+			}
+		.container{
+			display:grid;
+			grid-template-columns:25% 36% 36%;
+			grid-template-rows:auto auto auto auto auto auto;
+			background-color:#4834d4;
+			height:auto;
+			width:auto;
+			grid-gap:10px;
+		}
+		.grid_item{
+			background-color:rgba(255, 255, 255, 0.9);
+			padding:15px;
+			
+			word-wrap:break-word;
+		
+			overflow:hidden;
+			color:#192a56;
+		}
+		#photo{
+			align:center;
+			position:relative;
+			
+			width:130px;
+			height:180px;
+			
+		}
+		li{
+			padding-bottom:5px
+			}
+		.header{
+			grid-column:1/span 3;grid-row:1;
+			background:#341f97;
+			color:white;
+			width:99%;
+		}
+		.profile{
+			grid-column:1;grid-row:2/span 5;font-family:sans-serif;
+		}
+		.education{
+			grid-column:2/span 3;grid-row:2
+			}
+		.work{
+			grid-column:2/span 3;grid-row:3
+			}
+		.project{
+			grid-column:2/span 3;grid-row:4
+			}
+		.skill{
+			grid-column:2/span 3;grid-row:5
+			}
+		.volunteer{
+			grid-column:2/span 3;grid-row:6
+			}
+		.profile div{
+			padding:10px;
+			margin-left:0;
+			height:fit-content;
+			width:fit-content;
+		}
+		.introduction{position:right;margin-left:16%;left:14%}
+		#title{position:relative;z-index:0}
+		#title:hover{color:white}
+		#title::before{
+			content:"";
+			position:absolute;
+			left:50%;
+			height:100%;
+			z-index:-1;
+			width:0;
+			transition:0.5s;
+			background:#686de0;
+			border-radius:10px 10px 10px 10px;
+		}
+		#title:hover::before{
+			left:0;
+			width:100%;
+			}
+		
+		h1,h2{
+			text-align:center
+			}
+		#objective{
+			padding:15px
+			}
+		.label{
+			font-weight:bold;
+			margin-top:20px;
+			}
+		.profile span{
+			font-style:oblique;float:left;padding-right:20%;font-weight:normal;margin-top:5px;
+			}
+		.profile a{
+			margin-top:5px;
+			float:left;padding-right:20%
+			}
+
+		.time{
+			display:inline;padding-left:20px;float:right;
+			position:relative
+			}
+		.location{
+			float:right
+			}
+		.major{
+			display:block;margin:5px;position:relative;left:3%
+			}
+		details p{
+			font-family:cursive;width:95%;margin:0;position:relative;left:3%
+			}
+		.itemContainer{position:relative;width:80%}
+		details{
+			transition:1s ease;border-radius:0 0 50px 50px;cursor:pointer;
+			position:relative;z-index:0;
+			}
+		
+		summary{position:relative;}
+		summary:hover{color:#f5f6fa;}
+		.smr{;display:inline;position:relative;left:0;font-family:Helvetica, Arial, sans-serif;font-weight:bold}	
+		summary::before{
+			content:"";
+			position:absolute;
+			left:0;
+			height:100%;
+			width:0%;
+			background:#686de0;
+			border-radius:0 5px 5px 0;
+			z-index:-1;
+			transition:0.5s
+		}
+		summary:hover::before{
+			width:100%;
+		}
+		details:not([open]){}
+		details[open]{background:white;height:180%}
+		#projectlist{
+			list-style-type:none
+			}
+		#unilist{
+			list-style-type:none
+			}
+		#role{
+			font-weight:bold;
+			margin-top:8px;
+			margin-bottom:8px;
+			}
+		#workinglist{
+			list-style-type:none
+				}
+		.fluency{
+			float:right;margin-right:60%;
+			}
+			#title{
+			text-transform:uppercase;}
+		</style>
+		<script>
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="grid_item header" id="header">
+				<div class="itemContainer">
+					<div class="subcontent introduction">
+						<h1 id="intro">Zhan(Jeff) Wang </h1>
+						<h2 id="name">Master of IT student at University of Melbourne</h2>
+					</div>
+				</div>
+			</div>
+			<div class="grid_item profile"id="profile">
+				<div class="itemContainer profile">
+					<div class="subcontent label"><img id="photo" src="./1.jpg"></img></div>
+					<div class="subcontent label" id="phoneContainer">Mobile: <br> 
+						<span id="phone">0468560690</span>
+					</div>
+					<div class="subcontent label" id="emailContainer">Email:	<br>  	
+						<a href = "mailto: wzdx1024@gmail.com">wzdx1024@gmail</a>
+					</div>
+					<div class="subcontent label" id="githubContainer">GitHub Link: <br> 
+						<a href = "https://github.com/zhan006">https://github.com/zhan006</a>
+					</div>
+					<div class="subcontent label" id="livingAt">Living at:<br>
+						<span id="place"> Melbourne</span>
+					</div>
+					<div class="subcontent label" id="objectiveContainer">Objective:  
+						<ul id="objective">
+							<li>FullStack Engineer</li>
+							<li>BackEnd Software Developer</li>
+							<li>FrontEnd Software Developer</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<div class="grid_item education"id="education">
+			<div class="itemContainer" id="universities">
+					<h2 id="title">Education</h2>
+					<ul class="outerlist" id="unilist">
+						<li>
+							<details>
+								<summary class="uniname"><p class="smr"><dfn>University of Melbourne</dfn><span class="time">March 2019-Now</span></p></summary>
+								<p class="major">Master of Information Technology<span class="location">Melbourne</span></p>
+														
+							</details>						
+						</li>					
+						<li>						
+							<details>
+								<summary class="uniname"><p class="smr"><dfn>Nanyang Technological University</dfn><span class="time">August 2017-August 2018</span></p></summary>
+								<p class="major">Master of Power Engineering<span class="location">Singapore</span></p>
+							
+							</details>	</li>
+						<li>
+								<details>
+								<summary class="uniname"><p class="smr"><dfn>SiChuan University</dfn><span class="time" >September 2013-June 2017</span></p></summary>
+								<p class="major">Bachelor of Nuclear Engineering<span class="location">ChengDu</span></p>
+							
+							</details>	
+						</li>
+					</ul>			
+				</div>
+		</div>
+		
+		<div class="grid_item work"id="work">
+			<div class="itemContainer"id="experience">
+				<h2 id="title">Working Experience</h2>
+				<ul class="outerlist" id="workinglist">
+				    <li>
+						<details>
+							<summary class="company"><p class="smr">Internship At BMW China<span class="time" >October 2018-June 2017</span></p></summary>
+							<p id="role">IT Solution And Process<span class="location">Beijing</span></p>							
+							<ul class="innerlist" id="responsiblity">
+								<li><p>Maintaining <b>AZURE</b> server & Keeping scripts and webpages running on it</p></li>
+								<li><p>Developing various webcrawlers using <b>Python</b> fetching News,weather & traffic information from internet or intranet</p></li>
+								<li><p>Designing and making webpages using <b>HTML</b> combining with <b>CSS</b> & <b>JavaScript</b> displaying useful information</p> </li>
+								<li><p>Taking care of hardware equipments<p></li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="grid_item project"id="project">
+			<div class="itemContainer" id="projexp">
+				<h2 id="title">Project Experience</h2>
+				<ul class="outerlist" id="projectlist">
+					<li>
+						<details>
+							<summary class="projects"><p class="smr">Webcrawlers Projects<span class="time">Oct 2018 - Nov 2018</span></p></summary>
+							<p id="role">Intern at BMW</p>
+							<ul class="innerlist" id="projdetails">
+								<li><p>Using <b>Scrapy</b> framework along with other webcrawling techiques such as <b>Selenium</b> to develop several webcrawlers collecting daily news, weather and air quality information as well as pictures and videos from internet and BMW official websites</p>
+								</li>
+								<li>
+									<p>Presenting collected and processed data in <b>HTML</b> with lovely effect created by <b>JavaScript</b> and <b>CSS</b></p>
+								</li>
+								<li>
+									<p>Running scripts on <b>Azure</b> server by crontab service</p>
+								</li>
+							</ul>
+						</details>					
+					</li>
+					<li>
+						<details>
+							<summary class="projects"><p class="smr">Statistics of travel-time of a certain route in Beijing<span class="time">Nov 2018 - Dec 2018</span></p></summary>
+							<p id="role">Intern at BMW</p>
+							<ul class="innerlist" id="projdetails">
+								<li><p>Collecting traffic data from <b>BaiduMap API </b>and visualizing them in <b>HTML</b> after processing with <b>Python</b></p>
+								</li>
+							</ul>
+						</details>					
+					</li>
+					<li>
+						<details>
+							<summary class="projects"><p class="smr">Tensorflow practice<span class="time">Dec 2018-Jan 2019</span></p></summary>
+							<p id="role">Intern at BMW</p>
+							<ul class="innerlist" id="projdetails">
+								<li>
+									<p>Practicing recognation of handwriting numbers using CNN model</p></li>
+								<li>
+									<p>Practicing Style transfer techniques, merge pictures of street views and Van Gogh's "cafe"</p>
+								</li>
+							</ul>
+					</li>
+					<li>
+						<details>
+							<summary class="projects"><p class="smr">Androis app for Circuit analysis<span class="time">Dec 2018 -Apr 2018</span></p></summary>
+							<p id="role">student at Nanyang Technological University<p>
+							<ul class="innerlist" id="projdetails">
+								<li><p>Developing an <b>Android</b> app than be able to do circuit analysis</p></li>
+								<li><p>Implementing matrix analysis in <b>Java</b></p></li>
+								<li><p>Designing proper GUI using <b>XML</b> for user to interact with circuit</p></li>
+							</ul>
+						</details>
+					<li>
+						<details>
+							<summary class="projects"><p class="smr"> Autonomous web-browser<span class="time">April 2019</span></p></summary>
+							<p id="role">Student At Unimelb</p>
+							<ul class="innerlist" id="projdetails">
+								<li><p>A helpful <b>Python</b> scripts with aid of <b>Selenium </b>that can imitate human's behaviors to do repeated boring works</p></li>
+							</ul>							
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary class="projects"><p class="smr">Nim Game System <span class="time">Mar 2019-May 2019</span></p></summary>
+							<p id="role">Student at Unimelb</p>
+							<ul class="innerlist" id="projdetails">
+								<li><p>An assignment project which got full marks from Software Development and Programming Subject</p></li>
+								<li><p>A Nim Game system which players could play in command line implemented in <b>Java</b>, with the OOP programming concept</p> </li>
+							</ul>
+						</details>
+					</li>
+				</ul>								
+			</div>
+		</div>
+		<div class="grid_item skill"id="skill">
+			<div class="itemContainer skills">
+				<h2 id="title">Skills, Interests & Others</h2>
+				<ul class="outerlist" id="skills">
+				<details>
+				<summary><p class="smr">Programming Skills</p></summary>
+				<ul class="innerlist"id="skilllist">
+					<li>Python<span class="fluency">Most familiar with</span></li>
+					<li>JavaScript<span class="fluency">Medium</span></li>
+					<li>HTML<span class="fluency">medium</span></li>
+					<li>CSS<span class="fluency">medium</span></li>
+					<li>Java<span class="fluency">Proficient</span></li>
+					<li>MySQL<span class="fluency">Proficient</span></li>
+				</ul>
+				</details>
+				<details>
+					<summary><p class="smr">Language</p></summary>
+					<ul class="innerlist" id="language">
+					<li>Chinese<span class="fluency">Mother Tongue</span></li>
+					<li>English<span class="fluency">IELTS overall 7.0(2017)</span></li>
+					<li>Japanese<span class="fluency">Basic</span></li>
+					</ul>
+				</details>
+				<details>
+					<summary><p class="smr">Hobby</p></summary>
+					<ul class="innerlist"id="hobby">
+					<li>Swimming</li>
+					<li>Animation</li>
+					<li>Fitness</li>
+					</ul>
+				</details>
+			</ul>
+			</div>
+		</div>
+		<div class="grid_item volunteer"id="volunteer">
+			<div class="itemContainer"id="volunteerexp">
+				<h2 id="title">Volunteer Experience</h2>
+				<ul class="outerlist" id="volunteeringlist">
+					<li>
+					<details>
+						<summary><p class="smr">Student administrative supporter<span class="time">2016</span></p></summary>
+						<p id="role">Supporter<span class="location">Chengdu</span></p>						
+						<p class="detail">Helping staffs of school to arrange activities as well as authorizing students transcripts, awards and other administrative stuff</p>
+					</details>
+					</li>
+					<li>
+					<details>
+						<summary><p class="smr">Caring homeless dogs<span class="time">2015</span></p></summary>
+						<p id="role">Volunteer<span class="location">Chengdu</span></p>
+						
+						<p class="detail">Helping clean homeless dogs’ shelter and caring some baby dogs</p>
+					</details>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
